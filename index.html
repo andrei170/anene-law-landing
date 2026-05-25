@@ -18,6 +18,10 @@
 <meta name="twitter:title" content="Atlanta Fathers' Rights & Family Law Attorney | Anene Law">
 <meta name="twitter:description" content="Super Lawyers honoree. Sitting Magistrate Judge. 100+ custody cases won. Free consultation.">
 <meta name="twitter:image" content="https://anene-law.com/wp-content/uploads/2025/04/Onyema13-scaled-e1745455078395.jpg">
+<meta property="og:site_name" content="Anene Law">
+<meta property="og:image:alt" content="Attorney Onyema Anene Farrey, founder of Anene Law">
+<meta property="og:locale" content="en_US">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23091523'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='40' font-weight='700' fill='%23c4a052' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -45,6 +49,13 @@
   },
   "areaServed": "Atlanta Metropolitan Area, Georgia",
   "knowsAbout": ["Fathers' Rights", "Child Custody", "Divorce", "Legitimation", "Child Support", "Family Law", "Prenuptial Agreements", "Parental Alienation"],
+  "logo": "https://anene-law.com/wp-content/uploads/2020/10/LOGO-Length-SM.png",
+  "sameAs": [
+    "https://www.facebook.com/anenefarreylaw",
+    "https://www.instagram.com/attorneyfarrey/",
+    "https://twitter.com/AneneLaw",
+    "https://www.youtube.com/channel/UCIUdBoo-xS6DY61_auasoxQ"
+  ],
   "founder": {
     "@type": "Person",
     "name": "Onyema Anene Farrey",
@@ -269,9 +280,57 @@
 
   .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
   .reveal.in{opacity:1;transform:none}
+
+  /* anchor offset under sticky header */
+  section[id], a[id]{scroll-margin-top:86px}
+
+  /* accessibility */
+  .skip{position:absolute;left:-9999px;top:8px;background:var(--gold);color:var(--navy-deep);padding:10px 16px;border-radius:4px;z-index:300;font-weight:600}
+  .skip:focus{left:12px}
+  a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+  @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}*{animation-duration:.001ms!important;transition-duration:.001ms!important}}
+
+  /* desktop header phone */
+  .nav-phone{color:#fff;font-weight:600;font-size:14px;letter-spacing:.5px;display:flex;align-items:center;gap:7px}
+  .nav-phone:hover{color:var(--gold)}
+  .nav-phone .dot{width:7px;height:7px;border-radius:50%;background:#5fd08a;box-shadow:0 0 0 3px rgba(95,208,138,.25)}
+  @media(max-width:1080px){.nav-phone{display:none}}
+
+  /* mobile hamburger + drawer */
+  .burger{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:8px}
+  .burger span{width:26px;height:2px;background:var(--gold);transition:.25s}
+  .drawer{position:fixed;inset:0 0 0 auto;width:min(82%,330px);background:var(--navy-deep);transform:translateX(100%);transition:transform .3s ease;z-index:150;padding:90px 30px 30px;display:flex;flex-direction:column;gap:6px;box-shadow:-20px 0 60px rgba(0,0,0,.5)}
+  .drawer.open{transform:none}
+  .drawer a{color:#d8dde4;font-size:16px;padding:13px 0;border-bottom:1px solid rgba(255,255,255,.08);letter-spacing:1px;text-transform:uppercase}
+  .drawer a.btn{margin-top:18px;border:0;text-align:center;color:var(--navy-deep)}
+  .scrim{position:fixed;inset:0;background:rgba(5,12,20,.55);opacity:0;visibility:hidden;transition:.3s;z-index:140}
+  .scrim.open{opacity:1;visibility:visible}
+  @media(max-width:1080px){.burger{display:flex}}
+
+  /* floating mobile call */
+  .fab{position:fixed;bottom:18px;left:18px;right:18px;z-index:130;display:none;justify-content:center;gap:10px;align-items:center;background:var(--gold);color:var(--navy-deep);font-weight:700;padding:15px;border-radius:6px;box-shadow:0 12px 30px rgba(0,0,0,.35);letter-spacing:.5px}
+  @media(max-width:760px){.fab{display:flex}.final{padding-bottom:110px}}
+
+  /* consultation form */
+  .form-wrap{max-width:680px;margin:34px auto 0;background:#fff;border-radius:8px;padding:34px 32px;box-shadow:0 24px 60px rgba(0,0,0,.3);text-align:left}
+  .form-wrap h3{font-size:26px;color:var(--navy);text-align:center;margin-bottom:6px}
+  .form-wrap .sub{color:var(--muted);font-size:14px;text-align:center;margin-bottom:24px}
+  .frow{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .field{margin-bottom:14px}
+  .field label{display:block;font-size:12.5px;font-weight:600;color:var(--navy);margin-bottom:6px;letter-spacing:.3px}
+  .field input,.field select,.field textarea{width:100%;border:1px solid #d8d0bf;border-radius:5px;padding:12px 13px;font-family:inherit;font-size:14.5px;color:var(--ink);background:var(--paper);transition:border .2s}
+  .field input:focus,.field select:focus,.field textarea:focus{border-color:var(--gold);outline:none}
+  .field textarea{resize:vertical;min-height:90px}
+  .consent{display:flex;gap:10px;align-items:flex-start;font-size:12px;color:var(--muted);margin:4px 0 18px}
+  .consent input{margin-top:3px}
+  .form-wrap .btn{width:100%;border:0;font-size:16px;padding:15px}
+  .form-note{text-align:center;font-size:12px;color:var(--muted);margin-top:12px}
+  #formMsg{display:none;text-align:center;background:rgba(95,208,138,.12);border:1px solid #5fd08a;color:#1f7a47;padding:16px;border-radius:6px;margin-top:6px;font-size:14.5px}
+  @media(max-width:560px){.frow{grid-template-columns:1fr}.form-wrap{padding:28px 22px}}
 </style>
 </head>
 <body>
+<a href="#about" class="skip">Skip to content</a>
 <div id="progress"></div>
 
 <header>
@@ -287,10 +346,26 @@
       <a href="#fathers">Fathers' Rights</a>
       <a href="#custody">Child Custody</a>
       <a href="#testimonials">Testimonials</a>
+      <a href="tel:+16789488489" class="nav-phone"><span class="dot"></span>(678) 948-8489</a>
       <a href="#consult" class="btn">Free Consultation</a>
     </nav>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="drawer">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </header>
+
+<div class="scrim" id="scrim"></div>
+<nav class="drawer" id="drawer" aria-label="Mobile navigation">
+  <a href="#about">About Firm</a>
+  <a href="#family">Family Law</a>
+  <a href="#divorce">Divorce</a>
+  <a href="#fathers">Fathers' Rights</a>
+  <a href="#custody">Child Custody</a>
+  <a href="#testimonials">Testimonials</a>
+  <a href="tel:+16789488489">Call (678) 948-8489</a>
+  <a href="#consult" class="btn">Free Consultation</a>
+</nav>
 
 <a id="top"></a>
 <section class="hero" style="padding:0">
@@ -311,7 +386,7 @@
       </div>
     </div>
     <div class="hero-photo">
-      <img src="https://anene-law.com/wp-content/uploads/2025/04/Onyema13-scaled-e1745455078395.jpg" alt="Attorney Onyema Anene Farrey, founder of Anene Law in Atlanta">
+      <img src="https://anene-law.com/wp-content/uploads/2025/04/Onyema13-scaled-e1745455078395.jpg" alt="Attorney Onyema Anene Farrey, founder of Anene Law in Atlanta" fetchpriority="high" decoding="async" width="1010" height="1168">
       <div class="hero-badge">
         <b>Onyema Anene Farrey</b>
         <span>Founder &amp; Managing Attorney</span>
@@ -351,7 +426,7 @@
       </div>
     </div>
     <div class="reveal">
-      <img src="https://anene-law.com/wp-content/uploads/2021/08/Anene_Law_Headshots_112020-10.jpg" alt="The team at Anene Farrey & Associates, Atlanta family law firm">
+      <img src="https://anene-law.com/wp-content/uploads/2021/08/Anene_Law_Headshots_112020-10.jpg" alt="The team at Anene Farrey & Associates, Atlanta family law firm" loading="lazy" decoding="async">
     </div>
   </div>
 </section>
@@ -377,7 +452,7 @@
 <section id="family" class="split">
   <div class="wrap split-grid">
     <div class="reveal">
-      <img src="https://anene-law.com/wp-content/uploads/2021/01/family-law-anene.jpg" alt="Family law representation in Atlanta, Georgia">
+      <img src="https://anene-law.com/wp-content/uploads/2021/01/family-law-anene.jpg" alt="Family law representation in Atlanta, Georgia" loading="lazy" decoding="async">
     </div>
     <div class="col-text reveal">
       <span class="kicker">Practice Area</span>
@@ -412,7 +487,7 @@
       <a href="#consult" class="btn">Understand Your Options</a>
     </div>
     <div class="reveal">
-      <img src="https://anene-law.com/wp-content/uploads/2021/01/prenuptial-agreement-anene.jpg" alt="Divorce and prenuptial agreement representation in Georgia">
+      <img src="https://anene-law.com/wp-content/uploads/2021/01/prenuptial-agreement-anene.jpg" alt="Divorce and prenuptial agreement representation in Georgia" loading="lazy" decoding="async">
     </div>
   </div>
 </section>
@@ -421,7 +496,7 @@
 <section id="fathers" class="split">
   <div class="wrap split-grid">
     <div class="reveal">
-      <img src="https://anene-law.com/wp-content/uploads/2021/01/fathers-rights-anene.jpg" alt="Fathers' rights attorney in Atlanta, Georgia">
+      <img src="https://anene-law.com/wp-content/uploads/2021/01/fathers-rights-anene.jpg" alt="Fathers' rights attorney in Atlanta, Georgia" loading="lazy" decoding="async">
     </div>
     <div class="col-text reveal">
       <span class="kicker">Our Signature Practice</span>
@@ -456,7 +531,7 @@
       <a href="#consult" class="btn">Discuss Custody</a>
     </div>
     <div class="reveal">
-      <img src="https://anene-law.com/wp-content/uploads/2021/01/Poughkeepsie-Child-Custody-Lawyers.jpg" alt="Child custody attorney in Atlanta, Georgia">
+      <img src="https://anene-law.com/wp-content/uploads/2021/01/Poughkeepsie-Child-Custody-Lawyers.jpg" alt="Child custody attorney in Atlanta, Georgia" loading="lazy" decoding="async">
     </div>
   </div>
 </section>
@@ -486,7 +561,7 @@
 <section class="athlete">
   <div class="wrap athlete-grid">
     <div class="reveal">
-      <img src="https://anene-law.com/wp-content/uploads/2021/07/Atty-Farrey-and-AJ-Terrell-up-close-700x450.jpg" alt="Attorney Onyema Anene Farrey with Atlanta Falcons cornerback A.J. Terrell">
+      <img src="https://anene-law.com/wp-content/uploads/2021/07/Atty-Farrey-and-AJ-Terrell-up-close-700x450.jpg" alt="Attorney Onyema Anene Farrey with Atlanta Falcons cornerback A.J. Terrell" loading="lazy" decoding="async" width="700" height="450">
     </div>
     <div class="reveal">
       <span class="eyebrow">Trusted by Atlanta</span>
@@ -579,8 +654,41 @@
     <p>Schedule a confidential consultation with Anene Law and get a clear, honest read on where you stand.</p>
     <div class="hero-cta" style="justify-content:center;margin-top:26px">
       <a href="tel:+16789488489" class="btn">Call (678) 948-8489</a>
-      <a href="mailto:info@anene-law.com?subject=Consultation%20Request" class="btn btn-ghost">Request a Consultation</a>
+      <a href="#consultForm" class="btn btn-ghost">Request a Consultation</a>
     </div>
+
+    <div class="form-wrap reveal" id="consultForm">
+      <h3>Request Your Confidential Consultation</h3>
+      <p class="sub">Tell us a little about your situation. We will reach out to schedule your consultation.</p>
+      <form id="leadForm" novalidate>
+        <div class="frow">
+          <div class="field"><label for="fn">First name</label><input id="fn" name="fn" type="text" autocomplete="given-name" required></div>
+          <div class="field"><label for="ln">Last name</label><input id="ln" name="ln" type="text" autocomplete="family-name" required></div>
+        </div>
+        <div class="frow">
+          <div class="field"><label for="ph">Phone</label><input id="ph" name="ph" type="tel" autocomplete="tel" required></div>
+          <div class="field"><label for="em">Email</label><input id="em" name="em" type="email" autocomplete="email" required></div>
+        </div>
+        <div class="field">
+          <label for="matter">How can we help?</label>
+          <select id="matter" name="matter">
+            <option value="">Select a practice area</option>
+            <option>Fathers' Rights</option>
+            <option>Child Custody</option>
+            <option>Divorce</option>
+            <option>Child Support</option>
+            <option>Legitimation</option>
+            <option>Other family law matter</option>
+          </select>
+        </div>
+        <div class="field"><label for="msg">Brief description (optional)</label><textarea id="msg" name="msg"></textarea></div>
+        <label class="consent"><input type="checkbox" id="cons" required><span>I understand that contacting Anene Law through this form does not create an attorney-client relationship and that I should not share confidential details until a relationship is established.</span></label>
+        <button type="submit" class="btn">Request My Consultation</button>
+        <p class="form-note">Or call directly: <a href="tel:+16789488489" style="color:var(--navy);font-weight:600">(678) 948-8489</a></p>
+      </form>
+      <div id="formMsg">Thank you. Your request has been received and a member of our team will contact you shortly.</div>
+    </div>
+
     <div class="lead-magnet reveal">
       <b>Free Guide: The Georgia Father's Custody Checklist</b>
       <p>7 things to do before you file. Ask for your copy when you book your consultation.</p>
@@ -594,6 +702,8 @@
     </div>
   </div>
 </section>
+
+<a href="tel:+16789488489" class="fab" aria-label="Call Anene Law">&#9742;&nbsp; Call (678) 948-8489 &middot; Free Consultation</a>
 
 <footer>
   <div class="wrap">
@@ -621,17 +731,43 @@
 </footer>
 
 <script>
+  // scroll progress
   var prog=document.getElementById('progress');
   window.addEventListener('scroll',function(){
     var h=document.documentElement;
     var pct=(h.scrollTop)/(h.scrollHeight-h.clientHeight)*100;
     prog.style.width=pct+'%';
-  });
+  },{passive:true});
+
+  // reveal on scroll
   var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
   document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+
+  // FAQ accordion (with aria)
   document.querySelectorAll('.faq-q').forEach(function(q){
-    q.addEventListener('click',function(){q.parentElement.classList.toggle('open')});
+    q.setAttribute('role','button');q.setAttribute('tabindex','0');q.setAttribute('aria-expanded','false');
+    function toggle(){var item=q.parentElement;item.classList.toggle('open');q.setAttribute('aria-expanded',item.classList.contains('open'));}
+    q.addEventListener('click',toggle);
+    q.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();toggle();}});
   });
+
+  // mobile drawer
+  var burger=document.getElementById('burger'),drawer=document.getElementById('drawer'),scrim=document.getElementById('scrim');
+  function setMenu(open){drawer.classList.toggle('open',open);scrim.classList.toggle('open',open);burger.setAttribute('aria-expanded',open);document.body.style.overflow=open?'hidden':'';}
+  burger.addEventListener('click',function(){setMenu(!drawer.classList.contains('open'));});
+  scrim.addEventListener('click',function(){setMenu(false);});
+  drawer.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){setMenu(false);});});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')setMenu(false);});
+
+  // consultation form (demo)
+  var lf=document.getElementById('leadForm');
+  if(lf){lf.addEventListener('submit',function(e){
+    e.preventDefault();
+    if(!lf.checkValidity()){lf.reportValidity();return;}
+    lf.style.display='none';
+    var m=document.getElementById('formMsg');m.style.display='block';
+    m.scrollIntoView({behavior:'smooth',block:'center'});
+  });}
 </script>
 </body>
 </html>
