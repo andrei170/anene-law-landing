@@ -25,7 +25,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <!-- Structured data: legal service + attorney (AEO foundation) -->
 <script type="application/ld+json">
@@ -134,10 +134,10 @@
   }
   *{margin:0;padding:0;box-sizing:border-box}
   html{scroll-behavior:smooth}
-  body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.65;-webkit-font-smoothing:antialiased}
-  h1,h2,h3,.serif{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;line-height:1.12;letter-spacing:.2px}
+  body{font-family:'Poppins',system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.72;font-weight:400;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,.serif{font-family:'Libre Baskerville',Georgia,serif;font-weight:400;line-height:1.22;letter-spacing:0}
   a{color:inherit;text-decoration:none}
-  img{max-width:100%;display:block}
+  img{max-width:100%;display:block;height:auto}
   .wrap{max-width:1140px;margin:0 auto;padding:0 24px}
   .gold{color:var(--gold)}
 
@@ -146,7 +146,7 @@
   header{position:sticky;top:0;z-index:100;background:rgba(9,21,35,.92);backdrop-filter:blur(10px);border-bottom:1px solid rgba(196,160,82,.2)}
   .nav{display:flex;align-items:center;justify-content:space-between;height:74px}
   .brand{display:flex;flex-direction:column;line-height:1}
-  .brand .name{font-family:'Cormorant Garamond',serif;font-size:25px;font-weight:700;color:#fff;letter-spacing:1px}
+  .brand .name{font-family:'Libre Baskerville',serif;font-size:25px;font-weight:700;color:#fff;letter-spacing:1px}
   .brand .sub{font-size:10px;letter-spacing:2.5px;color:var(--gold);text-transform:uppercase;margin-top:3px}
   .nav-links{display:flex;gap:22px;align-items:center}
   .nav-links a{color:#d8dde4;font-size:12.5px;font-weight:500;transition:color .2s;letter-spacing:1.2px;text-transform:uppercase}
@@ -160,22 +160,22 @@
 
   .hero{background:linear-gradient(160deg,var(--navy-deep),var(--navy) 55%,var(--navy-2));color:#fff;position:relative;overflow:hidden}
   .hero:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 80% 15%,rgba(196,160,82,.14),transparent 45%);pointer-events:none}
-  .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:50px;align-items:center;padding:74px 0 80px}
+  .hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:64px;align-items:center;padding:90px 0 96px}
   .eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:22px}
   .eyebrow:before{content:"";width:34px;height:1px;background:var(--gold)}
-  .hero h1{font-size:clamp(38px,5vw,62px);color:#fff}
+  .hero h1{font-size:clamp(32px,4.3vw,52px);color:#fff;font-weight:400;line-height:1.18}
   .hero h1 em{font-style:italic;color:var(--gold-soft)}
   .hero p.lede{font-size:18px;color:#c6cfda;margin:24px 0 14px;max-width:560px}
   .hero .cred-line{font-size:14.5px;color:#9fb0c2;margin-bottom:30px}
   .hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:34px}
   .trust-row{display:flex;gap:26px;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,.12);padding-top:24px}
   .trust-item{display:flex;flex-direction:column}
-  .trust-item b{font-family:'Cormorant Garamond',serif;font-size:30px;color:var(--gold);font-weight:700}
+  .trust-item b{font-family:'Libre Baskerville',serif;font-size:30px;color:var(--gold);font-weight:700}
   .trust-item span{font-size:12.5px;color:#9fb0c2;letter-spacing:.4px}
-  .hero-photo{position:relative}
-  .hero-photo img{border-radius:6px;box-shadow:0 30px 70px rgba(0,0,0,.45);border:1px solid rgba(196,160,82,.3);object-fit:cover;width:100%;aspect-ratio:5/6}
+  .hero-photo{position:relative;max-width:380px;margin-left:auto}
+  .hero-photo img{border-radius:8px;box-shadow:0 30px 70px rgba(0,0,0,.45);border:1px solid rgba(196,160,82,.3);object-fit:cover;object-position:center top;width:100%;aspect-ratio:4/5}
   .hero-badge{position:absolute;bottom:-18px;left:-18px;background:#fff;color:var(--navy);padding:14px 18px;border-radius:5px;box-shadow:0 16px 40px rgba(0,0,0,.3);max-width:210px}
-  .hero-badge b{display:block;font-family:'Cormorant Garamond',serif;font-size:17px;color:var(--navy)}
+  .hero-badge b{display:block;font-family:'Libre Baskerville',serif;font-size:17px;color:var(--navy)}
   .hero-badge span{font-size:12px;color:var(--muted)}
   @media(max-width:880px){.hero-grid{grid-template-columns:1fr;gap:40px;padding:50px 0 60px}.hero-photo{max-width:380px;margin:0 auto}}
 
@@ -184,7 +184,7 @@
   .cred-strip span{color:#aeb9c6;font-size:13.5px;letter-spacing:1.5px;text-transform:uppercase;font-weight:500;display:flex;align-items:center;gap:10px}
   .cred-strip span:before{content:"\2726";color:var(--gold);font-size:11px}
 
-  section{padding:84px 0}
+  section{padding:104px 0}
   .sec-head{text-align:center;max-width:700px;margin:0 auto 54px}
   .sec-head .eyebrow{justify-content:center}
   .sec-head .eyebrow:before{display:none}
@@ -192,7 +192,7 @@
   .sec-head p{color:var(--muted);font-size:17px;margin-top:14px}
 
   /* alternating split sections */
-  .split{padding:78px 0}
+  .split{padding:94px 0}
   .split.tint{background:var(--paper-2)}
   .split-grid{display:grid;grid-template-columns:1fr 1fr;gap:54px;align-items:center}
   .split-grid img{border-radius:6px;box-shadow:0 20px 50px rgba(13,31,51,.16);aspect-ratio:4/3;object-fit:cover;width:100%}
@@ -212,13 +212,13 @@
   .about p{color:#c6cfda}
   .about .kicker{color:var(--gold)}
   .about .pillars{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:26px}
-  .about .pillar b{font-family:'Cormorant Garamond',serif;color:var(--gold-soft);font-size:19px;display:block;margin-bottom:4px}
+  .about .pillar b{font-family:'Libre Baskerville',serif;color:var(--gold-soft);font-size:19px;display:block;margin-bottom:4px}
   .about .pillar span{font-size:13.5px;color:#aeb9c6}
 
   .proof-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
   .pcard{background:#fff;border:1px solid #e7e1d4;border-top:3px solid var(--gold);border-radius:5px;padding:30px 24px;transition:transform .2s,box-shadow .2s}
   .pcard:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(13,31,51,.1)}
-  .pcard .ic{font-family:'Cormorant Garamond',serif;font-size:40px;color:var(--gold);line-height:1;margin-bottom:10px}
+  .pcard .ic{font-family:'Libre Baskerville',serif;font-size:40px;color:var(--gold);line-height:1;margin-bottom:10px}
   .pcard h3{font-size:21px;color:var(--navy);margin-bottom:8px}
   .pcard p{font-size:14.5px;color:var(--muted)}
   @media(max-width:880px){.proof-grid{grid-template-columns:1fr 1fr}.about .pillars{grid-template-columns:1fr}}
@@ -227,7 +227,7 @@
   /* additional practice strip */
   .more-areas{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:10px}
   .ma{background:#fff;border:1px solid #e7e1d4;border-radius:5px;padding:22px 20px;text-align:center}
-  .ma b{font-family:'Cormorant Garamond',serif;color:var(--navy);font-size:18px;display:block;margin-bottom:4px}
+  .ma b{font-family:'Libre Baskerville',serif;color:var(--navy);font-size:18px;display:block;margin-bottom:4px}
   .ma span{font-size:13px;color:var(--muted)}
   @media(max-width:880px){.more-areas{grid-template-columns:1fr 1fr}}
 
@@ -242,7 +242,7 @@
 
   .athlete{background:linear-gradient(160deg,var(--navy),var(--navy-deep));color:#fff}
   .athlete-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:46px;align-items:center}
-  .athlete-grid img{border-radius:6px;border:1px solid rgba(196,160,82,.3);box-shadow:0 20px 50px rgba(0,0,0,.4)}
+  .athlete-grid img{width:100%;height:auto;border-radius:8px;border:1px solid rgba(196,160,82,.3);box-shadow:0 20px 50px rgba(0,0,0,.4)}
   .athlete h2{color:#fff;font-size:clamp(26px,3.2vw,40px);margin-bottom:16px}
   .athlete p{color:#c6cfda;font-size:16.5px}
   .athlete .cap{font-size:12.5px;color:#8a99aa;margin-top:14px;font-style:italic}
@@ -265,7 +265,7 @@
   .final h2{font-size:clamp(30px,4vw,50px);color:#fff;max-width:760px;margin:0 auto 18px}
   .final p{color:#c6cfda;font-size:18px;max-width:580px;margin:0 auto 14px}
   .final .lead-magnet{background:rgba(196,160,82,.1);border:1px solid var(--line);border-radius:6px;max-width:560px;margin:30px auto 0;padding:26px 28px}
-  .final .lead-magnet b{color:var(--gold-soft);font-family:'Cormorant Garamond',serif;font-size:22px;display:block;margin-bottom:6px}
+  .final .lead-magnet b{color:var(--gold-soft);font-family:'Libre Baskerville',serif;font-size:22px;display:block;margin-bottom:6px}
   .final .lead-magnet p{font-size:14.5px;margin-bottom:18px}
   .contactbar{display:flex;justify-content:center;gap:34px;flex-wrap:wrap;margin-top:40px;padding-top:30px;border-top:1px solid rgba(255,255,255,.12)}
   .contactbar div{font-size:14px;color:#c6cfda}
@@ -273,7 +273,7 @@
 
   footer{background:var(--navy-deep);color:#8a99aa;padding:46px 0 30px;font-size:13px}
   .foot-grid{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;border-bottom:1px solid rgba(255,255,255,.08);padding-bottom:24px;margin-bottom:20px}
-  .foot-grid .name{font-family:'Cormorant Garamond',serif;font-size:22px;color:#fff;font-weight:700;letter-spacing:1px}
+  .foot-grid .name{font-family:'Libre Baskerville',serif;font-size:22px;color:#fff;font-weight:700;letter-spacing:1px}
   .foot-soc{display:flex;gap:16px;margin-top:10px}
   .foot-soc a{color:var(--gold);font-size:13px}
   .disclaimer{color:#5f6c7b;font-size:11.5px;line-height:1.7;max-width:920px}
