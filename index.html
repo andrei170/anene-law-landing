@@ -44,7 +44,7 @@
     "addressCountry": "US"
   },
   "areaServed": "Atlanta Metropolitan Area, Georgia",
-  "knowsAbout": ["Fathers' Rights", "Child Custody", "Divorce", "Legitimation", "Child Support", "Family Law"],
+  "knowsAbout": ["Fathers' Rights", "Child Custody", "Divorce", "Legitimation", "Child Support", "Family Law", "Prenuptial Agreements", "Parental Alienation"],
   "founder": {
     "@type": "Person",
     "name": "Onyema Anene Farrey",
@@ -77,6 +77,14 @@
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "In Georgia, an unmarried father generally has no legal custody or visitation rights until he files for legitimation. Legitimation legally establishes the father-child relationship and is the gateway to pursuing custody, visitation, and parenting time."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is property divided in a Georgia divorce?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Georgia follows equitable division, which means marital property is divided fairly but not always equally. The court weighs factors such as each spouse's contributions, conduct, and financial circumstances to reach a fair division."
       }
     },
     {
@@ -122,26 +130,23 @@
   .wrap{max-width:1140px;margin:0 auto;padding:0 24px}
   .gold{color:var(--gold)}
 
-  /* scroll progress */
   #progress{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--gold),var(--gold-soft));z-index:200;transition:width .1s ease-out}
 
-  /* header */
   header{position:sticky;top:0;z-index:100;background:rgba(9,21,35,.92);backdrop-filter:blur(10px);border-bottom:1px solid rgba(196,160,82,.2)}
   .nav{display:flex;align-items:center;justify-content:space-between;height:74px}
   .brand{display:flex;flex-direction:column;line-height:1}
   .brand .name{font-family:'Cormorant Garamond',serif;font-size:25px;font-weight:700;color:#fff;letter-spacing:1px}
-  .brand .sub{font-size:10.5px;letter-spacing:3px;color:var(--gold);text-transform:uppercase;margin-top:3px}
-  .nav-links{display:flex;gap:30px;align-items:center}
-  .nav-links a{color:#d8dde4;font-size:14px;font-weight:500;transition:color .2s}
+  .brand .sub{font-size:10px;letter-spacing:2.5px;color:var(--gold);text-transform:uppercase;margin-top:3px}
+  .nav-links{display:flex;gap:22px;align-items:center}
+  .nav-links a{color:#d8dde4;font-size:12.5px;font-weight:500;transition:color .2s;letter-spacing:1.2px;text-transform:uppercase}
   .nav-links a:hover{color:var(--gold)}
-  .btn{display:inline-block;background:var(--gold);color:var(--navy-deep);font-weight:600;font-size:14.5px;padding:13px 26px;border-radius:3px;letter-spacing:.3px;transition:transform .15s ease,background .2s;cursor:pointer;border:none}
+  .btn{display:inline-block;background:var(--gold);color:var(--navy-deep);font-weight:600;font-size:14.5px;padding:13px 26px;border-radius:3px;letter-spacing:.3px;transition:transform .15s ease,background .2s;cursor:pointer;border:none;text-transform:none}
   .btn:hover{background:var(--gold-soft);transform:translateY(-1px)}
   .btn-ghost{background:transparent;border:1px solid var(--gold);color:var(--gold)}
   .btn-ghost:hover{background:var(--gold);color:var(--navy-deep)}
-  .nav .btn{padding:11px 22px}
-  @media(max-width:860px){.nav-links a:not(.btn){display:none}}
+  .nav .btn{padding:11px 20px;font-size:12.5px;letter-spacing:1px;text-transform:uppercase}
+  @media(max-width:1080px){.nav-links a:not(.btn){display:none}}
 
-  /* hero */
   .hero{background:linear-gradient(160deg,var(--navy-deep),var(--navy) 55%,var(--navy-2));color:#fff;position:relative;overflow:hidden}
   .hero:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 80% 15%,rgba(196,160,82,.14),transparent 45%);pointer-events:none}
   .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:50px;align-items:center;padding:74px 0 80px}
@@ -163,51 +168,57 @@
   .hero-badge span{font-size:12px;color:var(--muted)}
   @media(max-width:880px){.hero-grid{grid-template-columns:1fr;gap:40px;padding:50px 0 60px}.hero-photo{max-width:380px;margin:0 auto}}
 
-  /* marquee credibility strip */
   .cred-strip{background:var(--navy-deep);border-top:1px solid rgba(196,160,82,.18);border-bottom:1px solid rgba(196,160,82,.18)}
   .cred-strip .wrap{display:flex;flex-wrap:wrap;justify-content:center;gap:14px 44px;padding:20px 24px}
   .cred-strip span{color:#aeb9c6;font-size:13.5px;letter-spacing:1.5px;text-transform:uppercase;font-weight:500;display:flex;align-items:center;gap:10px}
   .cred-strip span:before{content:"\2726";color:var(--gold);font-size:11px}
 
-  /* sections */
   section{padding:84px 0}
-  .sec-head{text-align:center;max-width:680px;margin:0 auto 54px}
+  .sec-head{text-align:center;max-width:700px;margin:0 auto 54px}
   .sec-head .eyebrow{justify-content:center}
   .sec-head .eyebrow:before{display:none}
   .sec-head h2{font-size:clamp(30px,3.6vw,44px);color:var(--navy)}
   .sec-head p{color:var(--muted);font-size:17px;margin-top:14px}
 
-  /* proof cards */
+  /* alternating split sections */
+  .split{padding:78px 0}
+  .split.tint{background:var(--paper-2)}
+  .split-grid{display:grid;grid-template-columns:1fr 1fr;gap:54px;align-items:center}
+  .split-grid img{border-radius:6px;box-shadow:0 20px 50px rgba(13,31,51,.16);aspect-ratio:4/3;object-fit:cover;width:100%}
+  .split-grid.rev .col-text{order:2}
+  .split h2{font-size:clamp(28px,3.4vw,42px);color:var(--navy);margin-bottom:8px}
+  .split .kicker{color:var(--gold);font-weight:600;letter-spacing:2px;text-transform:uppercase;font-size:12px;margin-bottom:14px;display:block}
+  .split p{color:#3f4a59;font-size:16px;margin-bottom:14px}
+  .split ul{list-style:none;margin:20px 0 26px}
+  .split li{padding:8px 0 8px 32px;position:relative;font-size:15px;color:var(--ink)}
+  .split li:before{content:"\2713";position:absolute;left:0;top:8px;color:var(--gold);font-weight:700;background:rgba(196,160,82,.15);width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px}
+  @media(max-width:880px){.split-grid{grid-template-columns:1fr;gap:32px}.split-grid.rev .col-text{order:0}}
+
+  /* about firm band */
+  .about{background:linear-gradient(160deg,var(--navy),var(--navy-deep));color:#fff}
+  .about .split-grid img{border:1px solid rgba(196,160,82,.3);box-shadow:0 22px 55px rgba(0,0,0,.4)}
+  .about h2{color:#fff}
+  .about p{color:#c6cfda}
+  .about .kicker{color:var(--gold)}
+  .about .pillars{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:26px}
+  .about .pillar b{font-family:'Cormorant Garamond',serif;color:var(--gold-soft);font-size:19px;display:block;margin-bottom:4px}
+  .about .pillar span{font-size:13.5px;color:#aeb9c6}
+
   .proof-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
   .pcard{background:#fff;border:1px solid #e7e1d4;border-top:3px solid var(--gold);border-radius:5px;padding:30px 24px;transition:transform .2s,box-shadow .2s}
   .pcard:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(13,31,51,.1)}
   .pcard .ic{font-family:'Cormorant Garamond',serif;font-size:40px;color:var(--gold);line-height:1;margin-bottom:10px}
   .pcard h3{font-size:21px;color:var(--navy);margin-bottom:8px}
   .pcard p{font-size:14.5px;color:var(--muted)}
-  @media(max-width:880px){.proof-grid{grid-template-columns:1fr 1fr}}
+  @media(max-width:880px){.proof-grid{grid-template-columns:1fr 1fr}.about .pillars{grid-template-columns:1fr}}
   @media(max-width:520px){.proof-grid{grid-template-columns:1fr}}
 
-  /* fathers' rights feature */
-  .feature{background:var(--paper-2)}
-  .feature-grid{display:grid;grid-template-columns:1fr 1fr;gap:54px;align-items:center}
-  .feature-grid img{border-radius:6px;box-shadow:0 20px 50px rgba(13,31,51,.15);aspect-ratio:4/3;object-fit:cover;width:100%}
-  .feature h2{font-size:clamp(28px,3.4vw,42px);color:var(--navy);margin-bottom:18px}
-  .feature p{color:#3f4a59;font-size:16.5px;margin-bottom:16px}
-  .feature ul{list-style:none;margin:22px 0 28px}
-  .feature li{padding:9px 0 9px 32px;position:relative;font-size:15.5px;color:var(--ink)}
-  .feature li:before{content:"\2713";position:absolute;left:0;top:9px;color:var(--gold);font-weight:700;background:rgba(196,160,82,.15);width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px}
-  @media(max-width:880px){.feature-grid{grid-template-columns:1fr;gap:34px}}
-
-  /* practice areas */
-  .areas{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-  .area{background:var(--navy);color:#fff;border-radius:6px;padding:32px 28px;position:relative;overflow:hidden;transition:transform .2s}
-  .area:hover{transform:translateY(-4px)}
-  .area:after{content:"";position:absolute;right:-30px;bottom:-30px;width:120px;height:120px;background:radial-gradient(circle,rgba(196,160,82,.18),transparent 70%)}
-  .area h3{font-size:23px;color:#fff;margin-bottom:10px}
-  .area p{font-size:14px;color:#aeb9c6}
-  .area .num{font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:15px;letter-spacing:2px;margin-bottom:14px;display:block}
-  @media(max-width:880px){.areas{grid-template-columns:1fr 1fr}}
-  @media(max-width:520px){.areas{grid-template-columns:1fr}}
+  /* additional practice strip */
+  .more-areas{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:10px}
+  .ma{background:#fff;border:1px solid #e7e1d4;border-radius:5px;padding:22px 20px;text-align:center}
+  .ma b{font-family:'Cormorant Garamond',serif;color:var(--navy);font-size:18px;display:block;margin-bottom:4px}
+  .ma span{font-size:13px;color:var(--muted)}
+  @media(max-width:880px){.more-areas{grid-template-columns:1fr 1fr}}
 
   /* testimonials */
   .tgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
@@ -218,7 +229,6 @@
   .tcard .who span{display:block;font-weight:400;color:var(--muted);font-size:12.5px;font-style:normal}
   @media(max-width:880px){.tgrid{grid-template-columns:1fr}}
 
-  /* athlete proof band */
   .athlete{background:linear-gradient(160deg,var(--navy),var(--navy-deep));color:#fff}
   .athlete-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:46px;align-items:center}
   .athlete-grid img{border-radius:6px;border:1px solid rgba(196,160,82,.3);box-shadow:0 20px 50px rgba(0,0,0,.4)}
@@ -227,17 +237,9 @@
   .athlete .cap{font-size:12.5px;color:#8a99aa;margin-top:14px;font-style:italic}
   @media(max-width:880px){.athlete-grid{grid-template-columns:1fr;gap:30px}}
 
-  /* attorney bio */
-  .bio-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:50px;align-items:center}
-  .bio-grid img{border-radius:6px;box-shadow:0 20px 50px rgba(13,31,51,.15);aspect-ratio:4/5;object-fit:cover;width:100%}
-  .bio h2{font-size:clamp(28px,3.4vw,42px);color:var(--navy);margin-bottom:6px}
-  .bio .role{color:var(--gold);font-weight:600;letter-spacing:1px;text-transform:uppercase;font-size:13px;margin-bottom:18px}
-  .bio p{color:#3f4a59;font-size:16px;margin-bottom:14px}
-  .creds{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
-  .creds span{background:var(--paper-2);border:1px solid #e0d8c6;color:var(--navy);font-size:12.5px;font-weight:600;padding:7px 13px;border-radius:3px}
-  @media(max-width:880px){.bio-grid{grid-template-columns:1fr;gap:30px}.bio-grid img{max-width:340px;margin:0 auto}}
+  .creds{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px}
+  .creds span{background:rgba(196,160,82,.12);border:1px solid var(--line);color:var(--gold-soft);font-size:12.5px;font-weight:600;padding:7px 13px;border-radius:3px}
 
-  /* faq */
   .faq{background:var(--paper-2)}
   .faq-list{max-width:820px;margin:0 auto}
   .faq-item{background:#fff;border:1px solid #e7e1d4;border-radius:5px;margin-bottom:14px;overflow:hidden}
@@ -245,10 +247,9 @@
   .faq-q .pm{color:var(--gold);font-size:22px;transition:transform .25s;flex-shrink:0}
   .faq-a{max-height:0;overflow:hidden;transition:max-height .3s ease;color:var(--muted);font-size:15.5px}
   .faq-a div{padding:0 24px 22px}
-  .faq-item.open .faq-a{max-height:300px}
+  .faq-item.open .faq-a{max-height:320px}
   .faq-item.open .pm{transform:rotate(45deg)}
 
-  /* final cta */
   .final{background:linear-gradient(160deg,var(--navy-deep),var(--navy));color:#fff;text-align:center}
   .final h2{font-size:clamp(30px,4vw,50px);color:#fff;max-width:760px;margin:0 auto 18px}
   .final p{color:#c6cfda;font-size:18px;max-width:580px;margin:0 auto 14px}
@@ -259,7 +260,6 @@
   .contactbar div{font-size:14px;color:#c6cfda}
   .contactbar b{display:block;color:var(--gold);font-size:12px;letter-spacing:2px;text-transform:uppercase;margin-bottom:4px}
 
-  /* footer */
   footer{background:var(--navy-deep);color:#8a99aa;padding:46px 0 30px;font-size:13px}
   .foot-grid{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;border-bottom:1px solid rgba(255,255,255,.08);padding-bottom:24px;margin-bottom:20px}
   .foot-grid .name{font-family:'Cormorant Garamond',serif;font-size:22px;color:#fff;font-weight:700;letter-spacing:1px}
@@ -281,10 +281,12 @@
       <span class="sub">Farrey &amp; Associates</span>
     </a>
     <nav class="nav-links">
-      <a href="#why">Why Anene Law</a>
+      <a href="#about">About Firm</a>
+      <a href="#family">Family Law</a>
+      <a href="#divorce">Divorce</a>
       <a href="#fathers">Fathers' Rights</a>
-      <a href="#practice">Practice Areas</a>
-      <a href="#attorney">Attorney Farrey</a>
+      <a href="#custody">Child Custody</a>
+      <a href="#testimonials">Testimonials</a>
       <a href="#consult" class="btn">Free Consultation</a>
     </nav>
   </div>
@@ -327,6 +329,34 @@
   </div>
 </div>
 
+<!-- ABOUT FIRM -->
+<section id="about" class="about">
+  <div class="wrap split-grid">
+    <div class="col-text reveal">
+      <span class="kicker">About the Firm</span>
+      <h2>Built to level the playing field</h2>
+      <p>Anene Farrey &amp; Associates was founded on a simple conviction: every parent deserves serious, present representation in family court, and too many fathers were walking in without it. Attorney Onyema Anene Farrey built this firm to change that.</p>
+      <p>Our clients work directly with their attorney, not a rotating cast of paralegals. We pair the wise counsel families need in a hard season with the aggressive advocacy a courtroom demands, and we treat every case with the same urgency, no matter its size.</p>
+      <div class="pillars">
+        <div class="pillar reveal"><b>Direct attorney access</b><span>You work with your attorney, start to finish.</span></div>
+        <div class="pillar reveal"><b>Courtroom-tested</b><span>A national trial champion in your corner.</span></div>
+        <div class="pillar reveal"><b>Fathers'-rights focus</b><span>A practice built to advocate for dads.</span></div>
+        <div class="pillar reveal"><b>Atlanta-rooted</b><span>Serving families across the metro.</span></div>
+      </div>
+      <div class="creds">
+        <span>Super Lawyers</span>
+        <span>Magistrate Judge, Clayton County</span>
+        <span>100+ Cases Won</span>
+        <span>Legal Expert, Radio &amp; CLE</span>
+      </div>
+    </div>
+    <div class="reveal">
+      <img src="https://anene-law.com/wp-content/uploads/2021/08/Anene_Law_Headshots_112020-10.jpg" alt="The team at Anene Farrey & Associates, Atlanta family law firm">
+    </div>
+  </div>
+</section>
+
+<!-- WHY ANENE LAW -->
 <section id="why">
   <div class="wrap">
     <div class="sec-head reveal">
@@ -343,14 +373,59 @@
   </div>
 </section>
 
-<section id="fathers" class="feature">
-  <div class="wrap feature-grid">
+<!-- FAMILY LAW -->
+<section id="family" class="split">
+  <div class="wrap split-grid">
     <div class="reveal">
-      <img src="https://anene-law.com/wp-content/uploads/2021/01/fathers-rights-anene.jpg" alt="Father and child, fathers' rights representation in Georgia">
+      <img src="https://anene-law.com/wp-content/uploads/2021/01/family-law-anene.jpg" alt="Family law representation in Atlanta, Georgia">
+    </div>
+    <div class="col-text reveal">
+      <span class="kicker">Practice Area</span>
+      <h2>Family Law</h2>
+      <p>Family law touches the most personal parts of your life, and the decisions come with real emotional and financial weight. We are equipped to guide you through every phase, during a divorce and well after it, when orders need to be modified or enforced.</p>
+      <p>From the first consultation to the final order, you get wise counsel and aggressive representation on the matters that decide your family's future.</p>
+      <ul>
+        <li>Custody, visitation and parenting plans</li>
+        <li>Property division and spousal support</li>
+        <li>Child support determinations and modifications</li>
+        <li>Contempt actions, protective orders and grandparents' rights</li>
+      </ul>
+      <a href="#consult" class="btn">Talk Through Your Situation</a>
+    </div>
+  </div>
+</section>
+
+<!-- DIVORCE -->
+<section id="divorce" class="split tint">
+  <div class="wrap split-grid rev">
+    <div class="col-text reveal">
+      <span class="kicker">Practice Area</span>
+      <h2>Divorce</h2>
+      <p>No two divorces are the same. Whether yours is amicable or hard-fought, simple or high-asset, the goal is the same: protect what matters to you and reach a resolution you can build a future on.</p>
+      <p>Georgia divides marital property by equitable division, which means fair, not automatically equal. We work to position you well on property, support and parenting from the very first filing.</p>
+      <ul>
+        <li>Contested and uncontested divorce</li>
+        <li>High-asset and complex property division</li>
+        <li>Alimony and spousal support</li>
+        <li>Same-sex divorce and prenuptial or postnuptial agreements</li>
+      </ul>
+      <a href="#consult" class="btn">Understand Your Options</a>
     </div>
     <div class="reveal">
-      <span class="eyebrow">Our Signature Practice</span>
-      <h2>Protecting fathers' rights in Georgia</h2>
+      <img src="https://anene-law.com/wp-content/uploads/2021/01/prenuptial-agreement-anene.jpg" alt="Divorce and prenuptial agreement representation in Georgia">
+    </div>
+  </div>
+</section>
+
+<!-- FATHERS' RIGHTS -->
+<section id="fathers" class="split">
+  <div class="wrap split-grid">
+    <div class="reveal">
+      <img src="https://anene-law.com/wp-content/uploads/2021/01/fathers-rights-anene.jpg" alt="Fathers' rights attorney in Atlanta, Georgia">
+    </div>
+    <div class="col-text reveal">
+      <span class="kicker">Our Signature Practice</span>
+      <h2>Fathers' Rights</h2>
       <p>In Georgia, an unmarried father often has no legal right to custody or even visitation until he takes action. The system can feel stacked against you. It does not have to be.</p>
       <p>Attorney Farrey built this practice after seeing how many good fathers were shut out of their children's lives for lack of strong representation. We help fathers establish their rights and fight to keep their place in their children's lives.</p>
       <ul>
@@ -359,29 +434,55 @@
         <li>Fair, accurate child support determinations</li>
         <li>Modifications and contempt actions when orders are ignored</li>
       </ul>
-      <a href="#consult" class="btn">Discuss Your Case</a>
+      <a href="#consult" class="btn">Protect Your Rights</a>
     </div>
   </div>
 </section>
 
+<!-- CHILD CUSTODY -->
+<section id="custody" class="split tint">
+  <div class="wrap split-grid rev">
+    <div class="col-text reveal">
+      <span class="kicker">Practice Area</span>
+      <h2>Child Custody</h2>
+      <p>Georgia separates legal custody, the right to make decisions about medical care, education and religion, from physical custody, where your child actually lives. Arrangements range from primary custody to a true joint schedule where time is shared closely between both homes.</p>
+      <p>Courts decide based on the best interest of the child and favor arrangements that keep both parents present. We are passionate about making sure our clients keep a real, lasting presence in their children's lives.</p>
+      <ul>
+        <li>Legal and physical custody, joint and primary</li>
+        <li>Detailed, workable parenting plans</li>
+        <li>Parental alienation and relocation matters</li>
+        <li>Custody modifications as circumstances change</li>
+      </ul>
+      <a href="#consult" class="btn">Discuss Custody</a>
+    </div>
+    <div class="reveal">
+      <img src="https://anene-law.com/wp-content/uploads/2021/01/Poughkeepsie-Child-Custody-Lawyers.jpg" alt="Child custody attorney in Atlanta, Georgia">
+    </div>
+  </div>
+</section>
+
+<!-- ADDITIONAL PRACTICE AREAS -->
 <section id="practice">
   <div class="wrap">
     <div class="sec-head reveal">
-      <span class="eyebrow">Practice Areas</span>
-      <h2>Full-service family law</h2>
-      <p>Focused on fathers' rights, equipped for every family law matter in Georgia.</p>
+      <span class="eyebrow">More Ways We Help</span>
+      <h2>Additional practice areas</h2>
+      <p>Whatever your family is facing in Georgia, there is a good chance we have handled it.</p>
     </div>
-    <div class="areas">
-      <div class="area reveal"><span class="num">01</span><h3>Fathers' Rights</h3><p>Legitimation, custody, parenting time and paternity for Georgia fathers.</p></div>
-      <div class="area reveal"><span class="num">02</span><h3>Child Custody</h3><p>Primary, joint and modified custody arrangements built around your child's best interest.</p></div>
-      <div class="area reveal"><span class="num">03</span><h3>Divorce</h3><p>Contested and uncontested divorce, including high-asset and military matters.</p></div>
-      <div class="area reveal"><span class="num">04</span><h3>Child Support</h3><p>Accurate calculations, modifications and enforcement under Georgia guidelines.</p></div>
-      <div class="area reveal"><span class="num">05</span><h3>Legitimation</h3><p>The essential first step for unmarried fathers seeking custody or visitation.</p></div>
-      <div class="area reveal"><span class="num">06</span><h3>Prenuptial Agreements</h3><p>Clear, enforceable agreements that protect what matters before marriage.</p></div>
+    <div class="more-areas">
+      <div class="ma reveal"><b>Legitimation</b><span>The first step for unmarried fathers</span></div>
+      <div class="ma reveal"><b>Child Support</b><span>Calculations, modifications, enforcement</span></div>
+      <div class="ma reveal"><b>Prenuptial Agreements</b><span>Clear, enforceable protection</span></div>
+      <div class="ma reveal"><b>Parental Alienation</b><span>Protecting the parent-child bond</span></div>
+      <div class="ma reveal"><b>Relocation</b><span>Custody when a parent moves</span></div>
+      <div class="ma reveal"><b>Contempt &amp; Enforcement</b><span>When orders are ignored</span></div>
+      <div class="ma reveal"><b>Protective Orders</b><span>Safety for you and your children</span></div>
+      <div class="ma reveal"><b>Grandparents' Rights</b><span>Visitation and custody petitions</span></div>
     </div>
   </div>
 </section>
 
+<!-- ATHLETE PROOF -->
 <section class="athlete">
   <div class="wrap athlete-grid">
     <div class="reveal">
@@ -396,10 +497,11 @@
   </div>
 </section>
 
-<section id="results">
+<!-- TESTIMONIALS -->
+<section id="testimonials">
   <div class="wrap">
     <div class="sec-head reveal">
-      <span class="eyebrow">Client Words</span>
+      <span class="eyebrow">Testimonials</span>
       <h2>What clients say</h2>
       <p>Real reviews from clients Attorney Farrey has represented.</p>
     </div>
@@ -417,33 +519,28 @@
       <div class="tcard reveal">
         <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
         <p>"Attorney Farrey is discreet and professional. She got us the exact results that we wanted."</p>
-        <div class="who">Client<span>Verified review</span></div>
+        <div class="who">Verified Client<span>Verified review</span></div>
+      </div>
+      <div class="tcard reveal">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>"Attorney Farrey was a blessing to our family. We could not have achieved the result we got without her."</p>
+        <div class="who">C. Mitchell<span>Atlanta, GA</span></div>
+      </div>
+      <div class="tcard reveal">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>"Her expertise and presence in the courtroom was amazing. A great resource for our case."</p>
+        <div class="who">A. Johnson<span>Atlanta, GA</span></div>
+      </div>
+      <div class="tcard reveal">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>"Attorney Farrey is the real deal. You will not be disappointed. I was represented, and represented very well."</p>
+        <div class="who">T. Phillips<span>Atlanta, GA</span></div>
       </div>
     </div>
   </div>
 </section>
 
-<section id="attorney" class="feature">
-  <div class="wrap bio-grid">
-    <div class="reveal">
-      <img src="https://anene-law.com/wp-content/uploads/2025/02/Anene_Law_Headshots_112020-20-scaled.jpg" alt="Onyema Anene Farrey, founder and managing attorney of Anene Law">
-    </div>
-    <div class="bio reveal">
-      <h2>Meet Onyema Anene Farrey</h2>
-      <div class="role">Founder &amp; Managing Attorney</div>
-      <p>Attorney Farrey holds a J.D. and an M.B.A. from Stetson University, where she competed on the nation's top-ranked trial team and earned a national "Best Advocate" title. She has won more than 100 custody and legitimation cases and is recognized by Super Lawyers.</p>
-      <p>In 2020 she was sworn in as an Associate Magistrate Judge in Clayton County, giving her clients a rare advantage: an advocate who understands exactly how decisions are made from the bench.</p>
-      <div class="creds">
-        <span>Super Lawyers</span>
-        <span>Magistrate Judge, Clayton County</span>
-        <span>J.D. &amp; M.B.A., Stetson University</span>
-        <span>National Trial Champion</span>
-        <span>100+ Cases Won</span>
-      </div>
-    </div>
-  </div>
-</section>
-
+<!-- FAQ -->
 <section id="faq" class="faq">
   <div class="wrap">
     <div class="sec-head reveal">
@@ -460,6 +557,10 @@
         <div class="faq-a"><div>In Georgia, an unmarried father generally has no legal custody or visitation rights until he files for legitimation. It legally establishes the father-child relationship and is the gateway to pursuing custody, visitation and parenting time.</div></div>
       </div>
       <div class="faq-item reveal">
+        <div class="faq-q">How is property divided in a Georgia divorce?<span class="pm">+</span></div>
+        <div class="faq-a"><div>Georgia follows equitable division, which means marital property is divided fairly but not always equally. The court weighs each spouse's contributions, conduct and financial circumstances to reach a fair result.</div></div>
+      </div>
+      <div class="faq-item reveal">
         <div class="faq-q">How is child support calculated in Georgia?<span class="pm">+</span></div>
         <div class="faq-a"><div>Georgia uses an Income Shares model that considers both parents' gross incomes, the number of children and adjustments such as health insurance and childcare, then applies the state's guidelines to reach a presumptive amount.</div></div>
       </div>
@@ -471,6 +572,7 @@
   </div>
 </section>
 
+<!-- FINAL CTA -->
 <section id="consult" class="final">
   <div class="wrap">
     <h2>Your family deserves a serious advocate. Let's talk.</h2>
@@ -519,17 +621,14 @@
 </footer>
 
 <script>
-  // scroll progress
   var prog=document.getElementById('progress');
   window.addEventListener('scroll',function(){
     var h=document.documentElement;
     var pct=(h.scrollTop)/(h.scrollHeight-h.clientHeight)*100;
     prog.style.width=pct+'%';
   });
-  // reveal on scroll
-  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.14});
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
   document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
-  // faq accordion
   document.querySelectorAll('.faq-q').forEach(function(q){
     q.addEventListener('click',function(){q.parentElement.classList.toggle('open')});
   });
